@@ -21,7 +21,7 @@ const transactions = ref<Transaction[]>([
   <AppBalance />
   <IncomeExpense />
   <TransactionList :transactions="transactions" />
-  <AddTransaction />
+  <AddTransaction @add="transactions.push($event)" />
 </template>
 
 <style scoped></style>
