@@ -9,7 +9,6 @@
       <div>0,00 <span>PLN</span></div>
     </div>
   </div>
-  <p>Income/Expense</p>
 </template>
 
 <script setup lang="ts"></script>

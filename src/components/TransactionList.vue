@@ -1,20 +1,25 @@
+<script setup lang="ts">
+import type { Transaction } from '../types/types'
+
+defineProps({
+  transactions: {
+    type: Array as () => Transaction[],
+    required: true,
+  },
+})
+</script>
+
 <template>
   <div id="transaction-list">
-    <p>History</p>
-    <ul>
-      <li>
-        <span>Salary</span>
-        <span>+5000 PLN</span>
-      </li>
-      <li>
-        <span>Groceries</span>
-        <span>-200 PLN</span>
+    <p>HISTORY</p>
+    <ul v-if="transactions.length > 0">
+      <li v-for="transaction in transactions" :key="transaction.id">
+        <span>{{ transaction.description }}</span>
+        <span>{{ transaction.amount > 0 ? '+' : '' }}{{ transaction.amount }} PLN</span>
       </li>
     </ul>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped>
 #transaction-list {
