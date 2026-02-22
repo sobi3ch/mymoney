@@ -1,11 +1,16 @@
-<script setup lang="ts"></script>
-
+<script setup lang="ts">
+import AppHeader from './components/AppHeader.vue'
+import AppBalance from './components/AppBalance.vue'
+import IncomeExpense from './components/IncomeExpense.vue'
+import TransactionList from './components/TransactionList.vue'
+import AddTransaction from './components/AddTransaction.vue'
+</script>
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <AppHeader />
+  <AppBalance />
+  <IncomeExpense />
+  <TransactionList />
+  <AddTransaction />
 </template>
 
 <style scoped></style>
