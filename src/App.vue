@@ -5,6 +5,7 @@ import IncomeExpense from './components/IncomeExpense.vue'
 import TransactionList from './components/TransactionList.vue'
 import AddTransaction from './components/AddTransaction.vue'
 </script>
+
 <template>
   <AppHeader />
   <AppBalance />
