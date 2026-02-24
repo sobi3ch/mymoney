@@ -21,11 +21,8 @@ function addTransaction() {
     amount: amount.value,
   }
 
-  emit('add', newTransaction)
   // Emit the new transaction to the parent component
-  // You can use an event emitter or a state management solution like Vuex or Pinia
-  // For simplicity, we'll just log it here
-  console.log('New Transaction:', newTransaction)
+  emit('add', newTransaction)
 
   // Clear the input fields
   description.value = ''
