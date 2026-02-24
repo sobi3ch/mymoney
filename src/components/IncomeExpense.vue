@@ -1,17 +1,22 @@
+<script setup lang="ts">
+defineProps<{
+  income: string
+  expense: string
+}>()
+</script>
+
 <template>
   <div id="income-expense">
     <div>
       <p>INCOME</p>
-      <div>0,00 <span>PLN</span></div>
+      <div>{{ income }} <span>PLN</span></div>
     </div>
     <div>
       <p>EXPENSE</p>
-      <div>0,00 <span>PLN</span></div>
+      <div>{{ expense }} <span>PLN</span></div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped>
 #income-expense {
