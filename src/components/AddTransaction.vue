@@ -34,46 +34,25 @@ function addTransaction() {
 </script>
 
 <template>
-  <div id="add-transaction">
-    <h3 class="py-2 rounded-sm font-bold uppercase">Dodaj nową transakcję</h3>
-    <input v-model="description" type="text" placeholder="Opis" />
+  <div id="add-transaction" class="bg-white border-1 rounded-sm border-gray-300 p-5 mb-6">
+    <h3 class="py-2 mb-5 rounded-sm font-bold uppercase">Dodaj nową transakcję</h3>
+    <input
+      v-model="description"
+      type="text"
+      placeholder="Opis"
+      class="border border-gray-300 rounded-sm p-3 w-full mb-5"
+    />
     <input
       v-model.number="amount"
       type="number"
       placeholder="Amount (negative - expense, positive - income)"
+      class="border border-gray-300 rounded-sm p-3 w-full mb-5"
     />
-    <button @click="addTransaction">Dodaj transakcję</button>
+    <button
+      @click="addTransaction"
+      class="text-white bg-green-600 hover:bg-green-500 w-full p-3 border-none rounded-sm font-bold uppercase cursor-pointer"
+    >
+      Dodaj transakcję
+    </button>
   </div>
 </template>
-
-<style scoped>
-#add-transaction {
-  background-color: #fff;
-  padding: 20px;
-  text-align: left;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-#add-transaction h3 {
-  margin-bottom: 20px;
-}
-#add-transaction input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-#add-transaction button {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#add-transaction button:hover {
-  background-color: #218838;
-}
-</style>
