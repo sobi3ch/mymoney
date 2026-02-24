@@ -2,6 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 const appTitle = 'Auraa'
-const appSubtitle = 'Budżet domowy'
+const appSubtitle = 'Twój domowy budżet'
 document.title = appTitle
 createApp(App).provide('appTitle', appTitle).provide('appSubtitle', appSubtitle).mount('#app')
