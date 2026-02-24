@@ -36,7 +36,7 @@ function addTransaction() {
 <template>
   <div id="add-transaction">
     <h3 class="py-2 rounded-sm font-bold uppercase">Dodaj nową transakcję</h3>
-    <input v-model="description" type="text" placeholder="Description" />
+    <input v-model="description" type="text" placeholder="Opis" />
     <input
       v-model.number="amount"
       type="number"
