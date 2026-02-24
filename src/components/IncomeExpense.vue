@@ -6,30 +6,18 @@ defineProps<{
 </script>
 
 <template>
-  <div id="income-expense">
-    <div>
-      <p>INCOME</p>
+  <div id="income-expense" class="mb-6 grid grid-cols-2 gap-4 mb-6 text-center">
+    <div class="bg-green-500 text-gray-700 p-2 rounded-sm font-bold uppercase">
+      <p>dochód</p>
       <div>{{ income }} <span>PLN</span></div>
     </div>
-    <div>
-      <p>EXPENSE</p>
-      <div>{{ expense }} <span>PLN</span></div>
+    <div class="bg-red-500 text-gray-200 p-2 rounded-sm font-bold uppercase">
+      <p>wydatki</p>
+      <div class="flex items-baseline gap-1 justify-center">
+        <span>{{ expense }}</span> <span class="inline">PLN</span>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-#income-expense {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-#income-expense div {
-  width: 45%;
-}
-</style>
+<style scoped></style>
