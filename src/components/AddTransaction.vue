@@ -35,14 +35,14 @@ function addTransaction() {
 
 <template>
   <div id="add-transaction">
-    <h3>Add New Transaction</h3>
+    <h3 class="py-2 rounded-sm font-bold uppercase">Dodaj nową transakcję</h3>
     <input v-model="description" type="text" placeholder="Description" />
     <input
       v-model.number="amount"
       type="number"
       placeholder="Amount (negative - expense, positive - income)"
     />
-    <button @click="addTransaction">Add Transaction</button>
+    <button @click="addTransaction">Dodaj transakcję</button>
   </div>
 </template>
 
