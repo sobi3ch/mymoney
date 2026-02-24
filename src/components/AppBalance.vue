@@ -1,11 +1,15 @@
 <template>
   <div id="balance">
     <p>YOUR BALANCE</p>
-    <div>0,00 <span>PLN</span></div>
+    <div>{{ balance }} <span>PLN</span></div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  balance: number
+}>()
+</script>
 
 <style scoped>
 #balance {

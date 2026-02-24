@@ -6,7 +6,7 @@ import TransactionList from './components/TransactionList.vue'
 import AddTransaction from './components/AddTransaction.vue'
 import type { Transaction } from './types/types'
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const transactions = ref<Transaction[]>([
   { id: 1, description: 'Mąka', amount: 5000 },
@@ -14,11 +14,15 @@ const transactions = ref<Transaction[]>([
   { id: 3, description: 'yyy', amount: -300 },
   { id: 4, description: 'zzz', amount: -400 },
 ])
+
+const totalBalance = computed(() => {
+  return transactions.value.reduce((sum, transaction) => sum + transaction.amount, 0)
+})
 </script>
 
 <template>
   <AppHeader />
-  <AppBalance />
+  <AppBalance :balance="totalBalance" />
   <IncomeExpense />
   <TransactionList :transactions="transactions" />
   <AddTransaction @add="transactions.push($event)" />
