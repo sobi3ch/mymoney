@@ -9,6 +9,7 @@ import type { Transaction } from './types/types'
 import { ref, computed, inject } from 'vue'
 
 const appTitle = inject<string>('appTitle')
+const appSubtitle = inject<string>('appSubtitle')
 
 const transactions = ref<Transaction[]>([
   { id: 1, description: 'Mąka', amount: 5000 },
@@ -23,7 +24,7 @@ const totalBalance = computed(() => {
 </script>
 
 <template>
-  <AppHeader :appTitle="appTitle" />
+  <AppHeader :appTitle="appTitle" :appSubtitle="appSubtitle" />
   <AppBalance :balance="totalBalance" />
   <IncomeExpense />
   <TransactionList :transactions="transactions" />
