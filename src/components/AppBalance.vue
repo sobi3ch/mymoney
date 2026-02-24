@@ -1,6 +1,6 @@
 <template>
   <div id="balance">
-    <p>YOUR BALANCE</p>
+    <p class="py-2 rounded-sm font-bold uppercase">Twoje saldo</p>
     <div>{{ balance }} <span>PLN</span></div>
   </div>
 </template>
