@@ -6,7 +6,9 @@ import TransactionList from './components/TransactionList.vue'
 import AddTransaction from './components/AddTransaction.vue'
 import type { Transaction } from './types/types'
 
-import { ref, computed } from 'vue'
+import { ref, computed, inject } from 'vue'
+
+const appTitle = inject<string>('appTitle')
 
 const transactions = ref<Transaction[]>([
   { id: 1, description: 'Mąka', amount: 5000 },
@@ -21,11 +23,9 @@ const totalBalance = computed(() => {
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader :appTitle="appTitle" />
   <AppBalance :balance="totalBalance" />
   <IncomeExpense />
   <TransactionList :transactions="transactions" />
   <AddTransaction @add="transactions.push($event)" />
 </template>
-
-<style scoped></style>

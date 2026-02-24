@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const appTitle = 'My Money App'
+document.title = appTitle
+createApp(App).provide('appTitle', appTitle).mount('#app')
